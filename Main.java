@@ -15,7 +15,7 @@ public class Main {
             int random = (int) (Math.random() * 100 + 1);
             array[i] = random;
         }
-        System.out.println(Arrays.toString(addOn(array, 12)));
+        System.out.println(Arrays.toString(addOn(array, 656)));
     }
 }
 
