@@ -1,24 +1,23 @@
 import java.util.Arrays;
 
-public class Main1 {
-    public static int[] remove(int[] array) {
-        int[] newarray = new int[array.length - 1 ];
-        for (int i = 0; i < array.length - 1; i++){
+public class Main {
+    public static int[] addOn(int[] array, int number) {
+        int[] newarray = new int[array.length + 1];
+        for (int i = 0; i < array.length; i++){
             newarray[i] = array[i];
+            newarray[array.length] = number;
         }
-        return newarray;
+            return newarray;
     }
 
     public static void main(String[] args) {
-        int[] array = new int[3];
+        int[] array = new int[9];
         for (int i = 0; i < array.length; i++) {
             int random = (int) (Math.random() * 100 + 1);
             array[i] = random;
             System.out.println(array[i]);
         }
-
         System.out.println("****");
-        System.out.println("Deleted value is " + array[array.length - 1]);
-        System.out.println(Arrays.toString(remove(array)));
+        System.out.println(Arrays.toString(addOn(array, 656)));
     }
 }
