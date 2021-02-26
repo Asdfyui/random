@@ -1,23 +1,23 @@
 import java.util.Arrays;
 
-public class Main {
-    public static int[] addOn(int[] array, int number) {
-        int[] newarray = new int[array.length + 1];
-        newarray[0] = array[0];
-        newarray[1] = array[1];
-        newarray[2] = number;
+public class Main1 {
+    public static int[] remove(int[] array) {
+        int[] newarray = new int[array.length - 1 ];
+        for (int i = 0; i < array.length; i++){
+            newarray[i] = array[i];
+        }
         return newarray;
     }
 
     public static void main(String[] args) {
-        int[] array = new int[2];
+        int[] array = new int[3];
         for (int i = 0; i < array.length; i++) {
             int random = (int) (Math.random() * 100 + 1);
             array[i] = random;
+            System.out.println(array[i]);
         }
-        System.out.println(Arrays.toString(addOn(array, 656)));
+        System.out.println("****");
+        System.out.println(Arrays.toString(remove(array)));
     }
 }
-
-
 
