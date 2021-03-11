@@ -1,11 +1,13 @@
 public class Courses {
     Student student;
     private String subjectName;
-    private int studentGrade;
+    public int studentGrade;
+    private int averageGrade;
 
     Courses(){
     subjectName = "";
     studentGrade = 0;
+
     }
 
     Courses(String subjectName, int studentGrade){
@@ -13,26 +15,17 @@ public class Courses {
         this.studentGrade = studentGrade;
 
     }
-    public String getSubjectName() {
 
-        return subjectName;
-    }
-
-    public void setSubjectName(String subjectName) {
-
-        this.subjectName = subjectName;
-    }
-
-    public int getStudentGrade() {
-
-        return studentGrade;
-    }
-
-    public void setStudentGrade(int studentGrade) {
-
-        this.studentGrade = studentGrade;
-    }
     public String toString() {
         return this.subjectName;
     }
+
+    public int getStudentGrade() {
+        return this.studentGrade;
+    }
+    public int getAverageGrade(){
+        //getStudentGrade()
+        return 0;
+   }
+
 }
