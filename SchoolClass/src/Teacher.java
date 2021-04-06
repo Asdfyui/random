@@ -1,10 +1,10 @@
-public class Teacher {
+public class Teacher {//teacher class, holds info on teachers
     private String firstName;
     private String lastName;
     private String Subject;
     private String Name;
 
-    Teacher(String firstName, String lastName, String Subject){
+    Teacher(String firstName, String lastName, String Subject){//teacher constructor
         this.firstName = firstName;
         this.lastName = lastName;
         this.Name = firstName + " " + lastName;
