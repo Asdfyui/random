@@ -9,7 +9,6 @@ import java.util.ArrayList;
 
 public class Controller {
 
-    
     public ArrayList <String> numbers = new ArrayList<>();
     public Label Total;
 
@@ -59,21 +58,75 @@ public class Controller {
 
     public void Add(ActionEvent actionEvent) {
        clickOperator();
-    }
+       numbers.add("+");
+       }
 
     public void Subtract(ActionEvent actionEvent) {
         clickOperator();
-
+        numbers.add("-");
     }
 
     public void Multiply(ActionEvent actionEvent) {
         clickOperator();
+        numbers.add("*");
     }
 
     public void Equals(ActionEvent actionEvent) {
+        clickOperator();
+        int count2 = 1;
+        int count = 0;
+        int added = 0;
+        int subtracted = 0;
+        int multiplied = 0;
+        for (int i = 1; i <= numbers.size(); ++i){
+            if (count2 < numbers.size()){
+                if (numbers.get(count2).equals("+"));{
+
+                    if(count + 2 <= numbers.size()) {
+                        if (count == 0){
+                            added = Integer.parseInt(numbers.get(count)) + Integer.parseInt(numbers.get(count + 2));
+                        }
+                        if (count != 0){
+                            added = added + Integer.parseInt(numbers.get(count)) + Integer.parseInt(numbers.get(count + 2));
+                        }
+                    }
+                }
+                if (numbers.get(count2).equals("-"));{
+
+                    if (count == 0){
+                        added = Integer.parseInt(numbers.get(count)) + Integer.parseInt(numbers.get(count + 2));
+                    }
+                    if (count != 0){
+                        added = added + Integer.parseInt(numbers.get(count)) + Integer.parseInt(numbers.get(count + 2));
+                    }
+                }
+                if (numbers.get(count2).equals("*"));{
+                    if (count == 0){
+                        multiplied = Integer.parseInt(numbers.get(count)) * Integer.parseInt(numbers.get(count + 2));
+                    }
+                    if (count != 0){
+                            multiplied = multiplied * Integer.parseInt(numbers.get(count)) * Integer.parseInt(numbers.get(count + 2));
+                    }
+
+                }
+            }
+
+            count2++;
+            count2++;
+            count++;
+            count++;
+
+
+        }
+        System.out.println(added);
+
+
+
     }
 
     public void Clear(ActionEvent actionEvent) {
+        numbers.clear();
+        Total.setText("0");
     }
 
     private void addNumber(String num){
@@ -87,6 +140,7 @@ public class Controller {
     public void clickOperator(){
         numbers.add(Total.getText());
             Total.setText("0");
+
     }
 
 
